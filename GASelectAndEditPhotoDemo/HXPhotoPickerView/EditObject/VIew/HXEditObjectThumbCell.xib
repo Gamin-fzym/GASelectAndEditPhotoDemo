@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HXEditObjectThumbCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-J2-sO6">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_normal" translatesAutoresizingMaskIntoConstraints="NO" id="LnD-aT-tgZ">
+                        <rect key="frame" x="17.5" y="17.5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="UrG-vb-QBI"/>
+                            <constraint firstAttribute="width" constant="15" id="VpP-Me-5kE"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLQ-th-RVs">
+                        <rect key="frame" x="30" y="5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="PZo-Gg-jqM"/>
+                            <constraint firstAttribute="width" constant="15" id="yZ6-9o-PXC"/>
+                        </constraints>
+                        <state key="normal" image="优化未编辑"/>
+                        <state key="selected" image="优化已编辑"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="LnD-aT-tgZ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="9ND-Z9-6TK"/>
+                <constraint firstItem="GLQ-th-RVs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Zri-K3-mjq"/>
+                <constraint firstItem="3Xf-J2-sO6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ciW-6A-qT6"/>
+                <constraint firstAttribute="trailing" secondItem="3Xf-J2-sO6" secondAttribute="trailing" id="idn-hB-Knu"/>
+                <constraint firstAttribute="trailing" secondItem="GLQ-th-RVs" secondAttribute="trailing" constant="5" id="pUG-mN-3KZ"/>
+                <constraint firstItem="3Xf-J2-sO6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pqu-9B-ra8"/>
+                <constraint firstAttribute="bottom" secondItem="3Xf-J2-sO6" secondAttribute="bottom" id="sol-Rz-hTB"/>
+                <constraint firstItem="LnD-aT-tgZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tPV-K7-pP1"/>
+            </constraints>
+            <connections>
+                <outlet property="statusBut" destination="GLQ-th-RVs" id="naZ-Tu-JB8"/>
+                <outlet property="thumbIV" destination="3Xf-J2-sO6" id="FRG-3V-vQZ"/>
+                <outlet property="videoMarkIV" destination="LnD-aT-tgZ" id="hUJ-KF-Y99"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play_normal" width="35" height="35"/>
+        <image name="优化已编辑" width="20" height="20"/>
+        <image name="优化未编辑" width="20" height="20"/>
+    </resources>
+</document>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="didSelectImageView" destination="gAl-Um-OyA" id="fjk-mg-stE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="680" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyq-fn-NcO">
+                    <rect key="frame" x="16" y="400" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="9fb-Ag-YoY"/>
+                        <constraint firstAttribute="width" constant="100" id="n9L-12-odd"/>
+                    </constraints>
+                    <state key="normal" title="图片"/>
+                    <connections>
+                        <action selector="tapButtonAction:" destination="-1" eventType="touchUpInside" id="9KH-J9-WF2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="681" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YL2-HD-lnH">
+                    <rect key="frame" x="157" y="400" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="7FK-iP-qjo"/>
+                        <constraint firstAttribute="width" constant="100" id="beW-BQ-ivo"/>
+                    </constraints>
+                    <state key="normal" title="视频"/>
+                    <connections>
+                        <action selector="tapButtonAction:" destination="-1" eventType="touchUpInside" id="YVe-OC-azP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="682" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR1-LC-9Zp">
+                    <rect key="frame" x="298" y="400" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="q3h-wa-RxR"/>
+                        <constraint firstAttribute="width" constant="100" id="r2H-ys-OOX"/>
+                    </constraints>
+                    <state key="normal" title="图片/视频"/>
+                    <connections>
+                        <action selector="tapButtonAction:" destination="-1" eventType="touchUpInside" id="bPQ-cH-ESu"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gAl-Um-OyA">
+                    <rect key="frame" x="16" y="88" width="382" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIG-zZ-oKr">
+                    <rect key="frame" x="16" y="88" width="382" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="I7B-xU-KfR"/>
+                    </constraints>
+                    <state key="normal" title="选择的图片或视频"/>
+                    <connections>
+                        <action selector="showSelectImageOrVideoAction:" destination="-1" eventType="touchUpInside" id="oBh-Lq-tc6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gAl-Um-OyA" firstAttribute="trailing" secondItem="eIG-zZ-oKr" secondAttribute="trailing" id="2Bt-Ou-Ew3"/>
+                <constraint firstItem="gAl-Um-OyA" firstAttribute="bottom" secondItem="eIG-zZ-oKr" secondAttribute="bottom" id="2gX-pV-HH8"/>
+                <constraint firstAttribute="trailing" secondItem="GR1-LC-9Zp" secondAttribute="trailing" constant="16" id="9Xu-DN-3PB"/>
+                <constraint firstAttribute="trailing" secondItem="eIG-zZ-oKr" secondAttribute="trailing" constant="16" id="B4C-rG-apf"/>
+                <constraint firstItem="YL2-HD-lnH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MJe-ya-ut8"/>
+                <constraint firstItem="qyq-fn-NcO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="400" id="O4y-VI-q8k"/>
+                <constraint firstItem="YL2-HD-lnH" firstAttribute="top" secondItem="qyq-fn-NcO" secondAttribute="top" id="Op9-6z-9ye"/>
+                <constraint firstItem="eIG-zZ-oKr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="88" id="QXR-Mt-9WF"/>
+                <constraint firstItem="gAl-Um-OyA" firstAttribute="leading" secondItem="eIG-zZ-oKr" secondAttribute="leading" id="VbT-kf-Tmr"/>
+                <constraint firstItem="GR1-LC-9Zp" firstAttribute="top" secondItem="qyq-fn-NcO" secondAttribute="top" id="b2s-eH-Xma"/>
+                <constraint firstItem="eIG-zZ-oKr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="cXc-7h-XJy"/>
+                <constraint firstItem="qyq-fn-NcO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="lVq-7N-mjU"/>
+                <constraint firstItem="gAl-Um-OyA" firstAttribute="top" secondItem="eIG-zZ-oKr" secondAttribute="top" id="s0x-no-8HE"/>
+            </constraints>
+            <point key="canvasLocation" x="-171" y="123"/>
+        </view>
+    </objects>
+</document>
